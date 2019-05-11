@@ -2,9 +2,14 @@ export default {
   namespaced: true,
   state: {
     listRooms: [
-      { id: 1, name: 'Poerwsza sala'},
+      { id: 1, name: 'Pierwsza sala'},
       { id: 2, name: 'Druga sala'}
     ]
+  },
+  getters: {
+    getDetailsRoom: ({ listRooms }) => (idRoom) => {
+      return listRooms.find((room) => room.id === idRoom);
+    }
   },
   mutations: {
     ADD_ROOM (state, roomName) {
