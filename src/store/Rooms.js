@@ -2,14 +2,15 @@ export default {
   namespaced: true,
   state: {
     listRooms: [
-      { name: 'Poerwsza sala'},
-      { name: 'Druga sala'}
+      { id: 1, name: 'Poerwsza sala'},
+      { id: 2, name: 'Druga sala'}
     ]
   },
   mutations: {
     ADD_ROOM (state, roomName) {
       state.listRooms.push({
-        name: roomName
+        name: roomName,
+        id: new Date().getTime()
       });
     }
   },
