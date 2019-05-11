@@ -8,7 +8,7 @@ export default {
   },
   getters: {
     getDetailsRoom: ({ listRooms }) => (idRoom) => {
-      return listRooms.find((room) => room.id === idRoom);
+      return listRooms.find((room) => room.id === parseInt(idRoom));
     }
   },
   mutations: {

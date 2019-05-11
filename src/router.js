@@ -7,6 +7,7 @@ import DetailsRoom from './views/DetailsRoom.vue';
 Vue.use(Router);
 
 export default new Router({
+  mode: 'history',
   routes: [
     {
       path: '/',
@@ -21,7 +22,19 @@ export default new Router({
     {
       path: '/rooms/:id/show',
       name: 'ShowDetailsRoom',
-      component: DetailsRoom
+      component: DetailsRoom,
+      // children: [
+      //   {
+      //     path: 'test',
+      //     component: DetailsRoom,
+      //     children: [
+      //       {
+      //         path: 'test',
+      //         component: DetailsRoom,   
+      //       }
+      //     ]
+      //   }
+      // ]
     }
   ],
 });
