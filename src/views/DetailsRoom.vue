@@ -1,6 +1,6 @@
 <template>
   <div>
-    Sala: {{ details }}
+    Sala: {{ details.name }}
   </div>
 </template>
 
